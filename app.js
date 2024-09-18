@@ -24,6 +24,13 @@ app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
 
+app.get("/,(req,res)=>{
+        res.status(200).send({
+          "success":true,
+          "msg":"Node Server Running"
+        })
+})
+
 const User = require("./models/UserModel");
 const Message = require("./models/MessageModel");
 
